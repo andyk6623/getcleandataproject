@@ -35,7 +35,8 @@ You should create one R script called run_analysis.R that does the following.
 
 The zip file is downloaded and unzipped.
 Each of the key text files are read into r with read.table. The data in the Inertial Signals folders are not used for this project.
-Each column in the data frame is assigned appropriate labels. As per the readme file for the source data, the features.txt file contains the variable names for the x_train.txt and x_test.txt files.
+
+Each column in the data frame is assigned appropriate labels. As per the readme file for the source data, the features.txt file contains the variable names for the x_train.txt and x_test.txt files. These more descriptive variable names help to make this data more tidy.
 
 The 3 files with train data are combined into one and the 3 files with test data are combined into one by combining columns. The observations (rows) are all matching across each of the 3 files per group.
 
@@ -62,5 +63,9 @@ The data is grouped first by activity and then within each activity it is groupe
 The results are then written to a text file for submission
 
     # Write data set to a text file
-    write.table(new_tidydata, "tidydata_getcleandataproject", row.name = FALSE)
+    write.table(new_tidydata, "tidydata_getcleandataproject.txt", row.name = FALSE)
 
+To review the results, they can be read in with 
+
+     read.table("tidydata_getcleandataproject.txt", row.name = FALSE)
+     
