@@ -67,5 +67,5 @@ The results are then written to a text file for submission
 
 To review the results, they can be read in with 
 
-     read.table("tidydata_getcleandataproject.txt", row.name = FALSE)
+     read.table("tidydata_getcleandataproject.txt", header = TRUE)
      
